@@ -1,4 +1,4 @@
-Example: from command line, list the columns of a csv file, five versions provided below.
+Example: from command line, list the columns of a csv file, five versions provided below. 
 
 head daily.csv|python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
 head daily.csv|awk -F, '{if(NR==1){for(i=1;i<=NF;i++){print $i;}}}'
