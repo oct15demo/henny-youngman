@@ -5,7 +5,7 @@ One Liners
 Example: from command line, list the columns of a csv file, five versions provided below.
 
     head daily.csv|awk -F, '{if(NR==1){for(i=1;i<=NF;i++){print $i;}}}'
-    head daily.csv|perl -e '{;while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
+    head daily.csv|perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
     
     head daily.csv|python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
     head daily.csv|python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
@@ -17,7 +17,7 @@ Example: from command line, list the columns of a csv file, five versions provid
              10        20        30        40        50        60       70         80        90        100 
     
     awk -F, '{if(NR==1){for(i=1;i<=NF;i++){print $i;}}}'
-    perl -e '{;while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
+    perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
     
     python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
     python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
