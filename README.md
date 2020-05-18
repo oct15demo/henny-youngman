@@ -4,8 +4,7 @@ One Liners
 
 Example: From command line, list the columns of a csv file, five versions provided below.
 &nbsp;    
-&nbsp;    
-&nbsp;      
+&nbsp;        
 
     awk -F, '{if(NR==1){for(i=1;i<=NF;i++){print $i;}}}'
       
@@ -18,8 +17,7 @@ Example: From command line, list the columns of a csv file, five versions provid
     python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
       
     ... sys;import agate; table=agate.Table.from_csv(sys.stdin);[print(col) for col in table.column_names]'
-   
-&nbsp;  
+     
 &nbsp;  
 
 
