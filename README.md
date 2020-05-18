@@ -2,7 +2,7 @@
 One Liners
 ----------
 
-Example: from command line, list the columns of a csv file, five versions provided below.
+Example: From command line, list the columns of a csv file, five versions provided below.
 &nbsp;    
 &nbsp;    
 &nbsp;      
@@ -24,13 +24,13 @@ Example: from command line, list the columns of a csv file, five versions provid
 
 
 
-Python lines above don't include piped input in order to view that code in github's limited viewing window without having to scroll. There are just 109 columns, or 29 better than 1928's 80 char limit, https://en.wikipedia.org/wiki/Punched_card#IBM_80-column_punched_card_format_and_character_codes
+Python lines above don't include piped input, in order to view that code in github's limited viewing window without having to scroll. There are just 109 columns, or 29 better than 1928's 80 char limit, https://en.wikipedia.org/wiki/Punched_card#IBM_80-column_punched_card_format_and_character_codes
     
     1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
              10        20        30        40        50        60       70         80        90        100 
     
     
-Entirety of command lines shown below:
+Entirety of command lines, shown below:
 
     head daily.csv|awk -F, '{if(NR==1){for(i=1;i<=NF;i++){print $i;}}}'
     head daily.csv|perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
