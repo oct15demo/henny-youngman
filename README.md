@@ -20,7 +20,7 @@ Example: from command line, list the columns of a csv file, five versions provid
 
 Python lines above don't include piped input in order to view that code in github's limited viewing window without having to scroll. There are just 109 columns, or 29 better than 1928's 80 char limit, https://en.wikipedia.org/wiki/Punched_card#IBM_80-column_punched_card_format_and_character_codes
     
-    12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+    1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
              10        20        30        40        50        60       70         80        90        100 
     
     
