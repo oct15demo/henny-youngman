@@ -11,6 +11,7 @@ Example: from command line, list the columns of a csv file, five versions provid
       
     perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
       
+        
     
     python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
       
