@@ -82,3 +82,9 @@ Output:
     totalTestResultsIncrease
     
 Source of file in example: https://covidtracking.com/api/v1/states/daily.csv
+
+There is also a project https://pypi.org/project/pawk/ (not mine obviously)
+Powerful utility and yet small* codebase https://github.com/jasontrigg0/pawk/blob/master/pawk/pawk.py
+*small excluding python itself and the libs used 
+
+I started a utility I called awkthon, to enable awk syntax, but use case is dubious in light of pawk.
