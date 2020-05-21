@@ -22,6 +22,12 @@ Example: From command line, list the columns of a csv file, five versions provid
 
 
 
+There is also a project https://pypi.org/project/pawk/ (not mine obviously)
+Powerful utility and yet small* codebase https://github.com/jasontrigg0/pawk/blob/master/pawk/pawk.py
+*small excluding python itself and the libs used 
+
+I started writing a utility I called awkthon, to enable awk syntax, but use case is dubious in light of pawk.
+
 Python lines above don't include piped input, in order to view that code in github's limited viewing window without having to scroll. There are just 109 columns, or 29 better than 1928's 80 char limit, https://en.wikipedia.org/wiki/Punched_card#IBM_80-column_punched_card_format_and_character_codes
     
     1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
@@ -82,9 +88,3 @@ Output:
     totalTestResultsIncrease
     
 Source of file in example: https://covidtracking.com/api/v1/states/daily.csv
-
-There is also a project https://pypi.org/project/pawk/ (not mine obviously)
-Powerful utility and yet small* codebase https://github.com/jasontrigg0/pawk/blob/master/pawk/pawk.py
-*small excluding python itself and the libs used 
-
-I started a utility I called awkthon, to enable awk syntax, but use case is dubious in light of pawk.
