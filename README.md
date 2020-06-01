@@ -89,12 +89,14 @@ Output:
     
 Source of file in example: https://covidtracking.com/api/v1/states/daily.csv
 
+List the lenghts of lines in a file:
+
     cat 0047.txt |python -c 'import sys; [print(len(line)) for line in sys.stdin.readlines()]'
 
-59
-60
-13
-513
-819
-434
-646
+     59
+     60
+     13
+    513
+    819
+    434
+    646
