@@ -10,10 +10,12 @@ Example: From command line, list the columns of a csv file, five versions provid
       
     perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
       
-        
+    
     
     python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
       
+    python -c 'import sys;import csv;[print(col) for col in [lines for lines in csv.reader(sys.stdin)][0]]'
+    
     python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
       
     ... sys;import agate; table=agate.Table.from_csv(sys.stdin);[print(col) for col in table.column_names]'
