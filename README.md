@@ -42,6 +42,7 @@ Entirety of command lines, shown below:
     head daily.csv|perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
     
     head daily.csv|python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
+    head daily.csv|python -c 'import sys;import csv;[print(col) for col in [lines for lines in csv.reader(sys.stdin)][0]]'
     head daily.csv|python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
     head daily.csv|python -c 'import sys;import agate; table=agate.Table.from_csv(sys.stdin);[print(col) for col in table.column_names]'
     
