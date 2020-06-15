@@ -29,7 +29,8 @@ Example: From command line, list the columns of a csv file, ten versions provide
     '... sys;import csv; [print(f"{col.strip():>25}") for col in next(line for line in csv.reader(sys.stdin))]'
     
     
-    #csv with generator and formatting, plus example data of first row, formatting adds line feed if data > 100 in length for readability 
+    #csv with generator and formatting, plus example data of first row, formatting adds line feed if data > 100 in length for readability
+    #frow is lamba for formatted row, zrow is the zipped row of header name and first row data
     'import sys;import csv; lines = (line for line in csv.reader(sys.stdin)); frow=lambda zrow:f"{(zrow[0].strip()):>25} | {zrow[1].strip()}"; [print(frow(col) + ("\n" if len(col[1])>100 else "")) for col in zip(next(lines),next(lines))]'
 
     #the same line above broken into components to make more understandable, semicolons, enclosing quotes omitted.
@@ -62,7 +63,8 @@ Python lines above don't include piped input, in order to view that code in gith
     
     
 Entirety of command lines, shown below:
-    #awk, pearl
+
+    #awk, pearl    
     head daily.csv|awk -F, '{if(NR==1){for(i=1;i<=NF;i++){print $i;}}}'
     head daily.csv|perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
     
