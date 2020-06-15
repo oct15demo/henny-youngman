@@ -12,9 +12,29 @@ Example: From command line, list the columns of a csv file, five versions provid
       
     
     
-    python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
-      
-    python -c 'import sys;import csv;[print(col) for col in [lines for lines in csv.reader(sys.stdin)][0]]'
+#### #simple
+python3 -c 'import sys;[print(r) for r in sys.stdin.readlines()[0][:-1].split(",")]'
+#### #with generator
+python3 -c 'import sys;[print(col) for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
+#### #with generator and formatting, ':>25' right aligns with 25 spaces
+python3 -c 'import sys;[print( f"{(col.strip()):>25}") for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
+
+#### #csv simple
+python3 -c 'import sys;import csv;[print(col) for col in [lines for lines in csv.reader(sys.stdin)][0]]'
+#### #csv with generator
+python3 -c 'import sys;import csv;[print(col) for col in next(line for line in csv.reader(sys.stdin))]'
+#### #csv with generator and formatting
+python3 -c 'import sys;import csv; [print(f"{col.strip():>25}") for col in next(line for line in csv.reader(sys.stdin))]'
+#### #csv with generator and formatting, plus example data of first row, formatting adds line feed if data > 100 in length for readability 
+python3 -c 'import sys;import csv; lines = (line for line in csv.reader(sys.stdin)); frow=lambda zrow:f"{(zrow[0].strip()):>25} | {zrow[1].strip()}"; [print(frow(col) + ("\n" if len(col[1])>100 else "")) for col in zip(next(lines),next(lines))]'
+
+#### #the same line above broken into components to make more understandable, only semicolons and enclosing quotes omitted.
+
+import sys
+import csv
+lines = (line for line in csv.reader(sys.stdin))
+frow=lambda zrow:f"{(zrow[0].strip()):>25} | {zrow[1].strip()}"
+[print(frow(col) + ("\n" if len(col[1])>100 else "")) for col in zip(next(lines),next(lines))]
     
     python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
       
