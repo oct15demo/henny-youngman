@@ -10,13 +10,15 @@ Example: From command line, list the columns of a csv file, five versions provid
       
     perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
     
+    
     #simple, with generator, generator and formatting, ':>25' right aligns with 25 spaces
     
     python3 -c 'import sys;[print(r) for r in sys.stdin.readlines()[0][:-1].split(",")]'
     
     python3 -c 'import sys;[print(col) for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
     
-    python3 -c 'import sys;[print( f"{(col.strip()):>25}") for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
+    'import sys;[print( f"{(col.strip()):>25}") for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
+    
     
     #csv simple,  with generator, with generator and formatting
     
@@ -25,6 +27,7 @@ Example: From command line, list the columns of a csv file, five versions provid
     python3 -c 'import sys;import csv;[print(col) for col in next(line for line in csv.reader(sys.stdin))]'
     
     'import sys;import csv; [print(f"{col.strip():>25}") for col in next(line for line in csv.reader(sys.stdin))]'
+    
     
     #csv with generator and formatting, plus example data of first row, formatting adds line feed if data > 100 in length for readability 
     'import sys;import csv; lines = (line for line in csv.reader(sys.stdin)); frow=lambda zrow:f"{(zrow[0].strip()):>25} | {zrow[1].strip()}"; [print(frow(col) + ("\n" if len(col[1])>100 else "")) for col in zip(next(lines),next(lines))]'
