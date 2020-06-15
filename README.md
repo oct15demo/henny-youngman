@@ -2,7 +2,7 @@
 One Liners
 ----------
 
-Example: From command line, list the columns of a csv file, five versions provided below.
+Example: From command line, list the columns of a csv file, ten versions provided below.
 &nbsp;    
 &nbsp;        
 
@@ -17,7 +17,7 @@ Example: From command line, list the columns of a csv file, five versions provid
     
     python3 -c 'import sys;[print(col) for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
     
-    'import sys;[print( f"{(col.strip()):>25}") for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
+    '... sys;[print( f"{(col.strip()):>25}") for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
     
     
     #csv simple,  with generator, with generator and formatting (python3 -c left out to show more of line)
@@ -26,7 +26,7 @@ Example: From command line, list the columns of a csv file, five versions provid
     
     python3 -c 'import sys;import csv;[print(col) for col in next(line for line in csv.reader(sys.stdin))]'
     
-    'import sys;import csv; [print(f"{col.strip():>25}") for col in next(line for line in csv.reader(sys.stdin))]'
+    '... sys;import csv; [print(f"{col.strip():>25}") for col in next(line for line in csv.reader(sys.stdin))]'
     
     
     #csv with generator and formatting, plus example data of first row, formatting adds line feed if data > 100 in length for readability 
@@ -62,14 +62,21 @@ Python lines above don't include piped input, in order to view that code in gith
     
     
 Entirety of command lines, shown below:
-
+    #awk, pearl
     head daily.csv|awk -F, '{if(NR==1){for(i=1;i<=NF;i++){print $i;}}}'
     head daily.csv|perl -e '{while(<>){foreach (split(",",$_)){if($prev){print $prev."\n";}$prev=$_;}print $prev;exit()}}'
     
+    #simple, simple formatted, simple csv, simple csv formatted
     head daily.csv|python -c 'import sys;[print(r) for r in sys.stdin.readlines()[0].split(",")[:-1]]'
     head daily.csv|python -c 'import sys;import csv;[print(col) for col in [lines for lines in csv.reader(sys.stdin)][0]]'
     head daily.csv|python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
     head daily.csv|python -c 'import sys;import agate; table=agate.Table.from_csv(sys.stdin);[print(col) for col in table.column_names]'
+    
+    #with generators, simple and formatted, and lastly, with first row of data
+    cat daily.csv|python3 -c 'import sys;[print(col) for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
+    cat daily.csv|python3 -c 'import sys;[print( f"{(col.strip()):>25}") for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
+    cat daily.csv|python3 -c 'import sys;import csv;[print(col) for col in next(line for line in csv.reader(sys.stdin))]'
+    cat daily.csv|python3 -c 'import sys;import csv; lines = (line for line in csv.reader(sys.stdin)); frow=lambda zrow:f"{(zrow[0].strip()):>25} | {zrow[1].strip()}"; [print(frow(col) + ("\n" if len(col[1])>100 else "")) for col in zip(next(lines),next(lines))]'
     
 
 First ten lines of file daily.csv used in example.      
