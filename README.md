@@ -20,7 +20,7 @@ Example: From command line, list the columns of a csv file, five versions provid
     'import sys;[print( f"{(col.strip()):>25}") for col in next(r for r in sys.stdin.readlines())[:-1].split(",")]'
     
     
-    #csv simple,  with generator, with generator and formatting
+    #csv simple,  with generator, with generator and formatting (python3 -c left out to show more of line)
     
     python3 -c 'import sys;import csv;[print(col) for col in [lines for lines in csv.reader(sys.stdin)][0]]'
     
@@ -38,10 +38,11 @@ Example: From command line, list the columns of a csv file, five versions provid
     lines = (line for line in csv.reader(sys.stdin))
     frow=lambda zrow:f"{(zrow[0].strip()):>25} | {zrow[1].strip()}"
     [print(frow(col) + ("\n" if len(col[1])>100 else "")) for col in zip(next(lines),next(lines))]
-   
-#### #with pandas
+    
+    
+    #with pandas
     python -c 'import sys;import pandas;df=pandas.read_csv(sys.stdin);[print(col) for col in df.columns]'
-#### #with agate 
+    #with agate
     ... sys;import agate; table=agate.Table.from_csv(sys.stdin);[print(col) for col in table.column_names]'
      
 &nbsp;  
