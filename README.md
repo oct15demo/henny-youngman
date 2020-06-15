@@ -30,7 +30,7 @@ Example: From command line, list the columns of a csv file, ten versions provide
     
     
     #csv with generator and formatting, plus example data of first row, formatting adds line feed if data > 100 in length for readability
-    #frow is lamba for formatted row, zrow is the zipped row of header name and first row data
+    #frow is lamba for formatted row, zrow is the zipped list of header and first row data columns
     'import sys;import csv; lines = (line for line in csv.reader(sys.stdin)); frow=lambda zrow:f"{(zrow[0].strip()):>25} | {zrow[1].strip()}"; [print(frow(col) + ("\n" if len(col[1])>100 else "")) for col in zip(next(lines),next(lines))]'
 
     #the same line above broken into components to make more understandable, semicolons, enclosing quotes omitted.
