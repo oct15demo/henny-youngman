@@ -4,25 +4,6 @@ One Liners
 ----------
 Click on the README.md file above to view full width, since github still won't say how to get rid of the new right margin sidebar.
 
-https://github.blog/changelog/2020-06-23-design-updates-to-repositories-and-github-ui/
-
-Re: Why did a right margin 'About' appear
-
-GitHub Developer Support
-	
-Sat, Jul 18, 6:04 PM
-	
-to oct15demo
-
-\#\# Please do not write below this line ##
-
-We have not forgotten about you. We’ve been experiencing a high volume of tickets, driven by a greater than expected growth in customers. We have concrete plans to return to the responsive standard we are known for. Trust that your ticket is still in our queue and we’ll get you an answer as quickly as we can.
-
-Thank you again for your understanding and patience.
-
-The GitHub Team
-This email is a service from GitHub Support.
-
 Example: From command line, list the columns of a csv file, ten versions provided below.
 &nbsp;    
 &nbsp;        
@@ -158,3 +139,25 @@ List the lengths of lines in a file:
     819
     434
     646
+    
+Still waiting for a reply:
+
+Re: Why did a right margin 'About' appear
+
+GitHub Developer Support
+	
+Sat, Jul 18, 6:04 PM
+	
+to oct15demo
+
+\#\# Please do not write below this line ##
+
+We have not forgotten about you. We’ve been experiencing a high volume of tickets, driven by a greater than expected growth in customers. We have concrete plans to return to the responsive standard we are known for. Trust that your ticket is still in our queue and we’ll get you an answer as quickly as we can.
+
+Thank you again for your understanding and patience.
+
+The GitHub Team
+This email is a service from GitHub Support.
+
+The change that takes away space on the right margin, introduced June 23, 2020, without being able to hide.
+https://github.blog/changelog/2020-06-23-design-updates-to-repositories-and-github-ui/
