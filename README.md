@@ -160,4 +160,5 @@ The GitHub Team
 This email is a service from GitHub Support.
 
 The change that takes away space on the right margin, introduced June 23, 2020, without being able to hide.
+
 https://github.blog/changelog/2020-06-23-design-updates-to-repositories-and-github-ui/
