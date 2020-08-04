@@ -162,3 +162,25 @@ This email is a service from GitHub Support.
 The change that takes away space on the right margin, introduced June 23, 2020, without being able to hide.
 
 https://github.blog/changelog/2020-06-23-design-updates-to-repositories-and-github-ui/
+
+Updated responnse:
+
+ Aug 4, 2020, 1:21 PM UTC
+
+Hi oct15demo,
+
+Sorry for not getting back to you as quickly as we'd like! Please accept my apologies.
+
+I'm afraid there's no way to minimize or remove the "About" section built into GitHub, sorry!
+
+I know that some of our users, who feel as you do, have attempted to come up with some browser extensions that restore the old UI.
+
+They are mentioned in this thread of the Community Forum:
+
+https://github.community/t/how-to-opt-out-of-the-new-ui/119416/194
+
+Sorry again about the slowness!
+
+Cheers,
+
+Matt R
