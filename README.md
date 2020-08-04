@@ -2,7 +2,7 @@
 # henny-youngman
 One Liners
 ----------
-Click on the README.md file above to view full width, since github still won't say how to get rid of the new right margin sidebar.
+Click on the README.md file above to view full width, since Github's new right margin sidebar, intro'd June 2020, obscures one liners.
 
 Example: From command line, list the columns of a csv file, ten versions provided below.
 &nbsp;    
