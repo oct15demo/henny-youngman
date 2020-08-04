@@ -165,12 +165,12 @@ Sorry again about the slowness!
 Original reply:\
 Re: Why did a right margin 'About' appear\
 GitHub Developer Support\
-Sat, Jul 18, 6:04 PM\
+Sat, Jul 18, 6:04 PM
 	
-to oct15demo\
+to oct15demo
 
 We have not forgotten about you. We’ve been experiencing a high volume of tickets, driven by a greater than expected growth in customers. We have concrete plans to return to the responsive standard we are known for. Trust that your ticket is still in our queue and we’ll get you an answer as quickly as we can.
 
 Thank you again for your understanding and patience.
 
-The GitHub Team\
+The GitHub Team
