@@ -180,5 +180,3 @@ They are mentioned in this thread of the Community Forum:
 https://github.community/t/how-to-opt-out-of-the-new-ui/119416/194
 
 Sorry again about the slowness!
-
-Cheers,
