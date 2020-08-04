@@ -58,7 +58,9 @@ Powerful utility and yet small* codebase https://github.com/jasontrigg0/pawk/blo
 
 I started writing a utility I called awkthon, to enable awk syntax, but use case is dubious in light of pawk.
 
-Python lines above don't include piped input, in order to view that code in github's limited viewing window without having to scroll. There are just 109 columns, or 29 better than 1928's 80 char limit, https://en.wikipedia.org/wiki/Punched_card#IBM_80-column_punched_card_format_and_character_codes
+This comment below about columns available was part of document before Github's June 2020 intro of right sidebar removed 9 more columns. Query to remove sidebar appended to bottom of this page.
+
+Python lines above don't include piped input, in order to view that code in github's limited viewing window without having to scroll. There are just ~109~ 100 columns, or ~29~ 20 better than 1928's 80 char limit, https://en.wikipedia.org/wiki/Punched_card#IBM_80-column_punched_card_format_and_character_codes
     
     1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
              10        20        30        40        50        60       70         80        90        100 
@@ -140,24 +142,6 @@ List the lengths of lines in a file:
     434
     646
     
-Still waiting for a reply:
-
-Re: Why did a right margin 'About' appear
-
-GitHub Developer Support
-	
-Sat, Jul 18, 6:04 PM
-	
-to oct15demo
-
-\#\# Please do not write below this line ##
-
-We have not forgotten about you. We’ve been experiencing a high volume of tickets, driven by a greater than expected growth in customers. We have concrete plans to return to the responsive standard we are known for. Trust that your ticket is still in our queue and we’ll get you an answer as quickly as we can.
-
-Thank you again for your understanding and patience.
-
-The GitHub Team
-This email is a service from GitHub Support.
 
 The change that takes away space on the right margin, introduced June 23, 2020, without being able to hide.
 
@@ -165,18 +149,28 @@ https://github.blog/changelog/2020-06-23-design-updates-to-repositories-and-gith
 
 Updated responnse:
 
- Aug 4, 2020, 1:21 PM UTC
+Aug 4, 2020, 1:21 PM UTC
 
 Hi oct15demo,
 
-Sorry for not getting back to you as quickly as we'd like! Please accept my apologies.
-
-I'm afraid there's no way to minimize or remove the "About" section built into GitHub, sorry!
-
-I know that some of our users, who feel as you do, have attempted to come up with some browser extensions that restore the old UI.
-
-They are mentioned in this thread of the Community Forum:
+Sorry for not getting back to you as quickly as we'd like! Please accept my apologies.\
+I'm afraid there's no way to minimize or remove the "About" section built into GitHub, sorry!\
+I know that some of our users, who feel as you do, have attempted to come up with some browser extensions that restore the old UI.\
+They are mentioned in this thread of the Community Forum:\
 
 https://github.community/t/how-to-opt-out-of-the-new-ui/119416/194
 
 Sorry again about the slowness!
+
+Original reply:\
+Re: Why did a right margin 'About' appear\
+GitHub Developer Support\
+Sat, Jul 18, 6:04 PM\
+	
+to oct15demo\
+
+We have not forgotten about you. We’ve been experiencing a high volume of tickets, driven by a greater than expected growth in customers. We have concrete plans to return to the responsive standard we are known for. Trust that your ticket is still in our queue and we’ll get you an answer as quickly as we can.
+
+Thank you again for your understanding and patience.
+
+The GitHub Team\
