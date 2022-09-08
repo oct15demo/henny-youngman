@@ -4,7 +4,15 @@ One Liners
 ----------
 Click on the README.md file above to view full width, since Github's new right margin sidebar, intro'd June 2020, obscures one liners.
 
-Example: From command line, list the columns of a csv file, ten versions provided below.
+From the command line, for piped files, the one liners list the columns of a csv file. Ten versions are provided below.
+Thus they list the header vertically, a simple transform, each column name is listed in a separate row for readablity.
+
+For awk like functionality, this example is offered:
+
+    cat txtfl|python3 -c 'import sys;[print(alst[2]) for alst in [(r.split(" ")) for r in sys.stdin.readlines()[:][:-1]]]'
+
+This will print the third field in each row after the line is read and split into fields. Uses nested list comprehensions.
+
 &nbsp;    
 &nbsp;        
 
